@@ -8,8 +8,7 @@ RUN apt-get install -y curl
 ENV JENKINS_HOST localhost
 ENV JENKINS_PORT 8080
 ENV SLAVE_NAME slave_n
-RUN mkdir /home/jenkins
+RUN useradd --create-home jenkins
 USER jenkins
-RUN chown jenkins /home/jenkins
 ADD ./start /start
 CMD /start
