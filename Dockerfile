@@ -8,4 +8,4 @@ ENV JENKINS_HOST localhost
 ENV JENKINS_PORT 8080
 ENV SLAVE_NAME slave_n
 ADD ./start /start
-CMD start
+CMD /start
