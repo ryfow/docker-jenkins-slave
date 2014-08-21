@@ -10,5 +10,6 @@ ENV JENKINS_PORT 8080
 ENV SLAVE_NAME slave_n
 RUN useradd --create-home jenkins
 USER jenkins
+WORKDIR /home/jenkins
 ADD ./start /start
 CMD /start
